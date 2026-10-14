@@ -1,0 +1,155 @@
+.orders-page__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.orders-page__head p {
+  margin-top: 6px;
+  max-width: 60ch;
+}
+
+/* The kitchen list (staff) still uses these rows. */
+.order-list {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.order-list__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 18px;
+  align-items: center;
+  padding: 14px 18px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.order-list__row:hover {
+  border-color: var(--color-primary);
+}
+
+.order-list__row--static:hover {
+  border-color: var(--color-border);
+}
+
+@media (max-width: 560px) {
+  .order-list__row {
+    grid-template-columns: 1fr auto;
+    gap: 6px 12px;
+  }
+  .order-list__row > :first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---- One order: details and live tracking (Day 47) ---- */
+.order-detail__meta {
+  margin: 6px 0 20px;
+}
+.order-detail__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.order-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+.order-card + .order-card {
+  margin-top: 20px;
+}
+.order-card h2 {
+  font-size: 1.05rem;
+  margin-bottom: 14px;
+}
+
+.order-facts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 16px;
+  font-size: 0.92rem;
+}
+.order-facts dt {
+  color: var(--color-muted);
+  font-weight: 600;
+}
+.order-facts dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.live-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.live-status .order-status {
+  margin: 0;
+  flex: 1 1 220px;
+}
+.live-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-muted);
+}
+.live-indicator__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-muted);
+}
+.live-indicator--live .live-indicator__dot {
+  background: var(--color-success);
+}
+.live-indicator--reconnecting .live-indicator__dot,
+.live-indicator--connecting .live-indicator__dot {
+  background: var(--color-accent);
+}
+.live-indicator--polling .live-indicator__dot {
+  background: var(--color-danger);
+}
+
+/* Same height for the placeholder and the map: the page does not jump. */
+.delivery-map {
+  height: 320px;
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+}
+.delivery-map .map-pin {
+  font-size: 1.6rem;
+  line-height: 1;
+  text-align: center;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35));
+}
+.map-note {
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 860px) {
+  .order-detail__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .delivery-map {
+    height: 280px;
+  }
+}

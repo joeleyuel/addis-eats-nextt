@@ -1,0 +1,135 @@
+.dish-detail__back {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  background: none;
+  color: var(--color-muted);
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 18px;
+  padding: 0;
+}
+.dish-detail__back:hover {
+  color: var(--color-primary);
+}
+
+.dish-detail__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+}
+
+.dish-detail__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.dish-detail__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dish-detail__category {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+
+.dish-detail__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dish-detail__heading h1 {
+  font-size: 1.9rem;
+}
+
+.dish-detail__rating {
+  margin: 8px 0 4px;
+  font-size: 0.9rem;
+}
+
+.dish-detail__price {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin: 8px 0 14px;
+}
+
+.dish-detail__desc {
+  margin-bottom: 18px;
+}
+
+.dish-detail__ingredients h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.dish-detail__ingredients ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dish-detail__ingredients li {
+  background: var(--color-primary-tint);
+  color: var(--color-primary-dark);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.dish-detail__qty {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 6px 16px;
+}
+
+.qty-control button {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.dish-detail__added {
+  margin-top: 12px;
+  color: var(--color-success);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.dish-detail__added a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .dish-detail__grid {
+    grid-template-columns: 1fr;
+  }
+}

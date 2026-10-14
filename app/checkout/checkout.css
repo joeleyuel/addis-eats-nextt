@@ -1,0 +1,227 @@
+.checkout-page__lead {
+  margin: 8px 0 0;
+  max-width: 60ch;
+}
+
+.checkout-notice {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-tint);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Summary first in the document (review, then fill in); on wide screens it sits on the right. */
+.checkout-page__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  grid-template-areas: "form summary";
+  gap: 30px;
+  align-items: start;
+  margin-top: 20px;
+}
+.checkout-form {
+  grid-area: form;
+  min-width: 0;
+}
+.checkout-summary {
+  grid-area: summary;
+}
+
+.checkout-section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px 8px;
+  margin: 0 0 20px;
+  min-width: 0;
+}
+.checkout-section legend {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  float: left; /* inside the card, not cutting through its border */
+  width: 100%;
+  padding: 0;
+  margin: 0 0 14px;
+}
+.checkout-section legend + * {
+  clear: both;
+}
+.checkout-section .field:last-of-type {
+  margin-bottom: 16px;
+}
+
+.delivery-estimate {
+  font-size: 0.88rem;
+  color: #1f7a45;
+  background: var(--color-success-tint);
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 6px 0 16px;
+}
+.delivery-estimate--muted {
+  color: var(--color-muted);
+  background: var(--color-bg);
+}
+
+.checkout-summary {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  position: sticky;
+  top: 90px;
+}
+.checkout-summary h2 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+.checkout-summary__list {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.92rem;
+}
+.checkout-summary__list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+}
+.checkout-summary__list li span:last-child {
+  white-space: nowrap;
+}
+.checkout-summary__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.92rem;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-border);
+  margin-top: 6px;
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+}
+.checkout-summary__row--total {
+  color: var(--color-ink);
+  font-weight: 800;
+  font-size: 1.15rem;
+  border-top: 2px solid var(--color-border);
+  padding-top: 14px;
+  margin-top: 10px;
+}
+.checkout-summary__edit {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.checkout-confirm {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+.checkout-confirm__icon {
+  font-size: 2.4rem;
+  margin-bottom: 6px;
+}
+.checkout-confirm__lead {
+  margin-top: 10px;
+}
+.checkout-confirm__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+.checkout-confirm__actions form {
+  margin: 0;
+}
+.order-detail__actions {
+  justify-content: flex-start;
+}
+
+@media (max-width: 800px) {
+  .checkout-page__grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "summary"
+      "form";
+    gap: 20px;
+  }
+  .checkout-summary {
+    position: static;
+  }
+  .checkout-section {
+    padding: 16px 16px 4px;
+  }
+  .checkout-confirm {
+    padding: 20px 16px;
+  }
+  .checkout-confirm__actions > * {
+    flex: 1 1 100%;
+  }
+  .checkout-confirm__actions .btn {
+    width: 100%;
+  }
+}
+
+/* Sign-in panel, confirmation status, form-level message. */
+.signin-panel {
+  max-width: 520px;
+}
+.signin-panel__lead {
+  margin: 0 0 16px;
+  color: var(--color-muted);
+}
+.checkout-form__message {
+  display: block;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background: #fdecea;
+  color: #8f2418;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.order-status {
+  margin: 12px 0 20px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background: var(--color-success-tint);
+  color: var(--color-ink);
+  font-weight: 600;
+}
+.checkout-confirm__signout {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+.order-status-error {
+  margin: -10px 0 20px;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.checkout-section h2 {
+  font-size: 1.05rem;
+  margin-bottom: 14px;
+}

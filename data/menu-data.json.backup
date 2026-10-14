@@ -1,0 +1,273 @@
+[
+  {
+    "id": "doro-wot-deluxe",
+    "name": "Doro Wot Deluxe",
+    "category": "Ethiopian",
+    "price": 480,
+    "rating": 4.9,
+    "reviews": 128,
+    "prepTime": "25 mins",
+    "spicy": true,
+    "vegan": false,
+    "image": "https://itsonly.recipes/images/recipeimages/ethiopian-doro-wat.webp",
+    "shortDescription": "Traditional slow-cooked chicken stew infused with aromatic berbere and spiced butter, served with boiled egg and injera.",
+    "description": "Addis Ababa's crown jewel. A rich, slow-cooked tender chicken drumstick gently simmered for hours in our house-blended berbere, caramelized red onions, crushed garlic, ginger, and spiced niter kibbeh butter. Served with a hard-boiled organic farm egg and two rolls of freshly baked 100% teff injera.",
+    "ingredients": [
+      "Free-range chicken drumstick",
+      "Organic farm egg",
+      "Pure teff injera (x2)",
+      "Awaze & berbere",
+      "Niter kibbeh butter",
+      "Cardamom & korarima"
+    ]
+  },
+  {
+    "id": "awaze-beef-tibs",
+    "name": "Awaze Beef Tibs",
+    "category": "Ethiopian",
+    "price": 450,
+    "rating": 4.8,
+    "reviews": 95,
+    "prepTime": "20 mins",
+    "spicy": true,
+    "vegan": false,
+    "image": "https://harambeeafrica.com/wp-content/uploads/2023/11/Tibs-with-injera1.jpg",
+    "shortDescription": "Tender cubes of beef sautéed in spicy awaze paste, rosemary, caramelized onions, and jalapeños.",
+    "description": "Cubed tenderloin flash-seared with fresh awaze paste, rosemary sprigs, garlic, and fresh green chili, finished in clarified spiced butter for a smoky, peppery bite.",
+    "ingredients": [
+      "Beef tenderloin",
+      "Awaze paste",
+      "Rosemary",
+      "Garlic",
+      "Green jalapeño",
+      "Niter kibbeh"
+    ]
+  },
+  {
+    "id": "addis-special-kitfo",
+    "name": "Addis Special Kitfo",
+    "category": "Ethiopian",
+    "price": 520,
+    "rating": 4.9,
+    "reviews": 140,
+    "prepTime": "20 mins",
+    "spicy": true,
+    "vegan": false,
+    "image": "https://d1w7312wesee68.cloudfront.net/jO_0avtAZxWKhSf185S1pyqW-CzrLi4llyzDzXfMrbQ/resize%3Afit%3A720%3A720/plain/s3%3A/toasttab/restaurants/restaurant-158045000000000000/menu/items/5/item-600000015011546015_1725401553.png",
+    "shortDescription": "Finely minced lean beef seasoned with spiced niter kibbeh butter, mitmita, served with ayib.",
+    "description": "Premium lean minced beef seasoned with fragrant niter kibbeh, fiery mitmita, paired with fresh ayib (Ethiopian cheese) and a bed of gomen.",
+    "ingredients": [
+      "Lean minced beef",
+      "Niter kibbeh butter",
+      "Mitmita spice",
+      "Ayib cheese",
+      "Gomen"
+    ]
+  },
+  {
+    "id": "gourmet-beyaynetu",
+    "name": "Gourmet Beyaynetu",
+    "category": "Ethiopian",
+    "price": 360,
+    "rating": 4.7,
+    "reviews": 88,
+    "prepTime": "20 mins",
+    "spicy": false,
+    "vegan": true,
+    "image": "https://ml8rqkav98fy.i.optimole.com/w%3A735/h%3A720/q%3Amauto/g%3Asm/f%3Abest/ig%3Aavif/https%3A/viaggioinafrica.com/vc/uploads/2026/01/injera.jpg",
+    "shortDescription": "Vibrant combination of spicy misir wot, kik alicha, collard greens, shiro, and fresh salad.",
+    "description": "A generous fasting platter combining spicy misir wot (red lentils), kik alicha (mild split peas), sautéed collard greens, creamy shiro, and a fresh side salad, all served on injera.",
+    "ingredients": [
+      "Misir wot",
+      "Kik alicha",
+      "Gomen",
+      "Shiro",
+      "Side salad",
+      "Injera"
+    ]
+  },
+  {
+    "id": "shiro-tegabino-pot",
+    "name": "Shiro Tegabino Pot",
+    "category": "Ethiopian",
+    "price": 290,
+    "rating": 4.9,
+    "reviews": 88,
+    "prepTime": "15 mins",
+    "spicy": false,
+    "vegan": true,
+    "image": "https://holycowvegan.net/wp-content/uploads/2023/02/ethiopian-shiro-wot-1.jpg",
+    "shortDescription": "Rich powdered chickpea stew bubbling hot in a traditional clay pot with garlic and diced tomatoes.",
+    "description": "A bubbling clay pot of powdered chickpea stew, simmered with garlic, ginger, diced tomatoes, and berbere, served straight from the fire for maximum warmth.",
+    "ingredients": [
+      "Shiro powder",
+      "Garlic",
+      "Tomato",
+      "Berbere",
+      "Onion"
+    ]
+  },
+  {
+    "id": "addis-clay-oven-pizza",
+    "name": "Addis Clay Oven Pizza",
+    "category": "Pizza",
+    "price": 390,
+    "rating": 4.7,
+    "reviews": 82,
+    "prepTime": "18 mins",
+    "spicy": true,
+    "vegan": false,
+    "image": "https://www.pizzarelli.restaurant/images/food-pizza-margherita.png",
+    "shortDescription": "Crispy thin crust topped with spiced minced beef, mozzarella, caramelized onions, and mild green chili.",
+    "description": "Fired in a traditional clay oven, this thin crust pizza is topped with spiced minced beef, mozzarella, caramelized onions, and a scattering of mild green chili for a local twist.",
+    "ingredients": [
+      "Thin pizza crust",
+      "Spiced minced beef",
+      "Mozzarella",
+      "Caramelized onion",
+      "Green chili"
+    ]
+  },
+  {
+    "id": "gusto-smoky-beef-burger",
+    "name": "Gusto Smoky Beef Burger",
+    "category": "Burgers",
+    "price": 340,
+    "rating": 4.8,
+    "reviews": 110,
+    "prepTime": "15 mins",
+    "spicy": false,
+    "vegan": false,
+    "image": "https://images.deliveryhero.io/image/fd-kh/products/997953.jpg?width=%25s",
+    "shortDescription": "Handmade beef patty with aged cheddar, caramelized onions, crisp lettuce, and Addis house secret sauce.",
+    "description": "A juicy handmade beef patty topped with aged cheddar, slow-caramelized onions, crisp lettuce, and our smoky house secret sauce, stacked in a toasted brioche bun.",
+    "ingredients": [
+      "Beef patty",
+      "Aged cheddar",
+      "Caramelized onion",
+      "Lettuce",
+      "Brioche bun",
+      "House sauce"
+    ]
+  },
+  {
+    "id": "classic-addis-macchiato",
+    "name": "Classic Addis Macchiato",
+    "category": "Drinks",
+    "price": 95,
+    "rating": 5.0,
+    "reviews": 215,
+    "prepTime": "10 mins",
+    "spicy": false,
+    "vegan": true,
+    "image": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/5/1/1430519722511/59a9c03e-50a4-45a8-8ee6-b5490f03f57e-1360x2040.jpeg?crop=none&dpr=1&s=none&width=445",
+    "shortDescription": "Rich double shot of Ethiopian Yirgacheffe espresso layered with velvety textured steamed milk.",
+    "description": "Addis-style layered dark roast espresso with dense micro-foamed milk, prepared from high-altitude Yirgacheffe beans grown in the Ethiopian highlands.",
+    "ingredients": [
+      "Yirgacheffe espresso",
+      "Steamed milk"
+    ]
+  },
+  {
+    "id": "fresh-mango-avocado-spris",
+    "name": "Fresh Mango & Avocado Spris",
+    "category": "Drinks",
+    "price": 130,
+    "rating": 4.9,
+    "reviews": 170,
+    "prepTime": "10 mins",
+    "spicy": false,
+    "vegan": true,
+    "image": "https://www.cookedbyjulie.com/wp-content/uploads/2020/05/Ethiopian-drink-one.jpg",
+    "shortDescription": "Signature layered Addis fresh fruit juice with ripe mango, creamy avocado, and a fresh lime twist.",
+    "description": "Thick, layered cold-pressed Hass avocado and sweet Arba Minch mango puree, topped with freshly squeezed lime for a bright finish.",
+    "ingredients": [
+      "Ripe mango",
+      "Hass avocado",
+      "Fresh lime",
+      "Ice"
+    ]
+  },
+  {
+    "id": "sizzling-shekla-tibs",
+    "name": "Sizzling Shekla Tibs",
+    "category": "Ethiopian",
+    "price": 450,
+    "rating": 4.8,
+    "reviews": 95,
+    "prepTime": "20 mins",
+    "spicy": true,
+    "vegan": false,
+    "image": "https://altohabesha.com/cdn/shop/files/H57677ae550ee43f2999c91f8a1cb95acm.jpg?v=1690888983&width=1200",
+    "shortDescription": "Prime beef sautéed with rosemary, red onions, garlic and fresh green jalapeño peppers, served sizzling.",
+    "description": "Prime cubed beef seared with rosemary, red onion, garlic, and fresh jalapeño, brought to your table sizzling in a traditional shekla clay dish.",
+    "ingredients": [
+      "Prime beef",
+      "Rosemary",
+      "Red onion",
+      "Garlic",
+      "Jalapeño"
+    ]
+  },
+  {
+    "id": "veggie-supreme-pizza",
+    "name": "Veggie Supreme Pizza",
+    "category": "Pizza",
+    "price": 350,
+    "rating": 4.6,
+    "reviews": 64,
+    "prepTime": "18 mins",
+    "spicy": false,
+    "vegan": true,
+    "image": "https://slice-menu-assets-prod.imgix.net/2255/1628773647_4e469b94c0",
+    "shortDescription": "Wood-fired thin crust loaded with peppers, mushrooms, olives, and fresh mozzarella.",
+    "description": "Our wood-fired thin crust loaded with bell peppers, mushrooms, kalamata olives, red onion, and fresh mozzarella.",
+    "ingredients": [
+      "Pizza crust",
+      "Bell pepper",
+      "Mushroom",
+      "Olive",
+      "Mozzarella"
+    ]
+  },
+  {
+    "id": "spiced-chicken-burger",
+    "name": "Spiced Chicken Burger",
+    "category": "Burgers",
+    "price": 310,
+    "rating": 4.7,
+    "reviews": 73,
+    "prepTime": "15 mins",
+    "spicy": true,
+    "vegan": false,
+    "image": "https://jordan-bruno.github.io/brunos-burgers/images/chicken_burger.png",
+    "shortDescription": "Crispy berbere-spiced chicken fillet with slaw and spicy mayo in a toasted bun.",
+    "description": "A crispy berbere-dusted fried chicken fillet, crunchy cabbage slaw, and spicy mayo, stacked in a toasted sesame bun.",
+    "ingredients": [
+      "Chicken fillet",
+      "Berbere spice",
+      "Slaw",
+      "Spicy mayo",
+      "Sesame bun"
+    ]
+  },
+  {
+    "id": "ethiopian-honey-wine",
+    "name": "Tej — Honey Wine",
+    "category": "Drinks",
+    "price": 150,
+    "rating": 4.8,
+    "reviews": 56,
+    "prepTime": "5 mins",
+    "spicy": false,
+    "vegan": true,
+    "image": "https://d3m4c209qf8hgy.cloudfront.net/uploads/ethiopian-desserts-honey-wine-tej-658x450-1742353029.jpg",
+    "shortDescription": "Traditional Ethiopian honey wine fermented with gesho leaves, served chilled in a berele.",
+    "description": "Traditional fermented honey wine, brewed with gesho leaves for a lightly bitter, floral finish, served chilled in a classic berele flask.",
+    "ingredients": [
+      "Honey",
+      "Gesho leaves",
+      "Water"
+    ]
+  }
+]

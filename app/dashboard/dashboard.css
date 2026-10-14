@@ -1,0 +1,64 @@
+.dashboard__lead {
+  margin: 8px 0 20px;
+  max-width: 62ch;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 0 24px;
+}
+.stat {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+.stat dt {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+.stat dd {
+  margin: 4px 0 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.dashboard__card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+.dashboard__card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+.dashboard__card .table-scroll {
+  margin-top: 16px;
+}
+.table-scroll--tall {
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+/* Fixed height: reserves the space, so nothing jumps when the chart appears. */
+.chart-box {
+  height: 300px;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard__card {
+    padding: 14px;
+  }
+}

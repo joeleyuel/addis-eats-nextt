@@ -1,0 +1,99 @@
+.menu-lead {
+  max-width: 640px;
+  margin: 8px 0 24px;
+}
+
+.menu-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.menu-search input {
+  width: 260px;
+  max-width: 100%;
+  padding: 11px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-size: 0.9rem;
+}
+
+.menu-search input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.menu-grid {
+  margin-top: 10px;
+}
+
+@media (max-width: 640px) {
+  .menu-search input {
+    width: 100%;
+  }
+}
+
+.menu-breadcrumb {
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.menu-breadcrumb a:hover {
+  color: var(--color-primary);
+}
+
+.menu-count {
+  margin: 0 0 16px;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* Stale results stay visible but dimmed while the next ones load. */
+.menu-grid--updating {
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.pager__link {
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.pager__link:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.pager__link--disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.pager__status {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.menu-error {
+  margin: 0 0 16px;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}

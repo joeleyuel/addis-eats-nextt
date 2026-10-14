@@ -1,0 +1,222 @@
+:root {
+  --color-bg: #f3f1f6;
+  --color-surface: #ffffff;
+  --color-ink: #201c2b;
+  --color-muted: #6c6679;
+  --color-border: #e6e2ee;
+  --color-primary: #c1440e;
+  --color-primary-dark: #97350b;
+  --color-primary-tint: #fdece4;
+  --color-accent: #e2a336;
+  --color-success: #2f9e5b;
+  --color-success-tint: #e6f6ec;
+  --color-danger: #c0392b;
+  --shadow-card: 0 1px 2px rgba(32, 28, 43, 0.06), 0 8px 24px rgba(32, 28, 43, 0.06);
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --font-display: var(--font-manrope), "Manrope", system-ui, sans-serif;
+  --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
+  --max-width: 1180px;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --color-bg: #17151d;
+  --color-surface: #211e29;
+  --color-ink: #f2eff7;
+  --color-muted: #a79fb5;
+  --color-border: #332e3e;
+  --color-primary: #e2653a;
+  --color-primary-dark: #ff8158;
+  --color-primary-tint: #3a2419;
+  --color-success-tint: #163524;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  scroll-padding-top: 84px; /* a focused control is never left hidden behind the sticky header */
+}
+
+body {
+  overflow-wrap: break-word; /* a long address or dish name never pushes the page sideways */
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.section {
+  padding: 32px 0;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  background: var(--color-primary-tint);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  margin: 0 0 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.field input,
+.field select,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 1rem; /* 16px: iOS does not zoom the page when a field is focused */
+  font-weight: 400;
+  min-height: 48px;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+  border-color: var(--color-primary);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 72px;
+}
+
+.field-error {
+  color: var(--color-danger);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0;
+}
+.field .field-error {
+  margin-top: -2px;
+}
+.field input[aria-invalid="true"],
+.field select[aria-invalid="true"],
+.field textarea[aria-invalid="true"] {
+  border-color: var(--color-danger);
+}
+
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 4px;
+  border: none;
+  background: none;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.link-btn:hover {
+  color: var(--color-danger);
+}
+
+/* People who ask their device for less motion get none. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
