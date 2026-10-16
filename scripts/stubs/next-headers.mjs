@@ -13,3 +13,9 @@ export function cookies() {
     },
   };
 }
+
+// Request headers the test controls (used by the admin sign-in's rate limiter).
+export const headerJar = (globalThis.__testHeaders ??= new Map());
+export function headers() {
+  return { get: (name) => headerJar.get(String(name).toLowerCase()) ?? null };
+}

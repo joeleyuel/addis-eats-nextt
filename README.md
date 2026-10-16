@@ -4,6 +4,8 @@ Days 46–48 add the staff **dashboard** (charts + an accessible, sortable, page
 
 > **Read this first — what was and was not verified.** This was prepared in an environment with **no npm registry, no Next.js install and no deployment access**. `npm install`, `npm run lint`, `npm run build`, Lighthouse, a real phone and the Vercel deployment were **not done**. What *was* run is listed under "Claim → command" below. Recharts and Leaflet code was written against their documented APIs but **has never been executed**: look at `/dashboard` and an order page first.
 
+**Admin console (`/admin`).** Overview, orders (search, filters, status changes), dishes (add / edit / delete) and customers, behind a separate admin sign-in that needs `ADMIN_PHONES` and a secret `ADMIN_ACCESS_CODE` (admin is off until both are set). See **`ADMIN.md`** for setup, security, limits and what was and was not verified (`npm run build` and `npm run lint` could not be run where this was written).
+
 ## Run it
 
 ```bash

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { requireSession } from "@/lib/session";
+import { isStaffRole } from "@/lib/roles";
 import { getStatus, listAllOrders } from "@/lib/orders";
 import { formatETB } from "@/lib/format";
 import { DELIVERY_AREAS } from "@/lib/delivery";
@@ -24,7 +25,7 @@ export const dynamic = "force-dynamic";
 // confirmed to them either.
 export default async function KitchenPage() {
   const session = await requireSession("/kitchen");
-  if (session.role !== "staff") notFound();
+  if (!isStaffRole(session.role)) notFound(); // staff, or an admin (who can do everything staff can)
 
   const orders = listAllOrders(session) ?? [];
 

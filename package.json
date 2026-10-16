@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "check:env": "node scripts/check-env.mjs",
-    "test": "node --no-warnings scripts/verify-auth.mjs && node --no-warnings scripts/verify-ui.mjs && node scripts/check-imports.mjs",
+    "test": "node --no-warnings scripts/verify-auth.mjs && node --no-warnings scripts/verify-ui.mjs && node --no-warnings scripts/verify-admin.mjs && node scripts/check-imports.mjs",
     "check:imports": "node scripts/check-imports.mjs"
   },
   "dependencies": {

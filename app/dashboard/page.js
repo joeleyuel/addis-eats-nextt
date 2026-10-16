@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { requireSession } from "@/lib/session";
+import { isStaffRole } from "@/lib/roles";
 import { getAllOrderRows, listAllOrders } from "@/lib/orders";
 import { revenueByArea, ordersPerDay, totals } from "@/lib/stats";
 import { birr, etb } from "@/lib/format";
@@ -31,7 +32,7 @@ export const dynamic = "force-dynamic";
 // rows, not every order. The order table receives one page of ten.
 export default async function DashboardPage({ searchParams }) {
   const session = await requireSession("/dashboard");
-  if (session.role !== "staff") notFound();
+  if (!isStaffRole(session.role)) notFound(); // staff, or an admin (who can do everything staff can)
 
   const demo = demoMode(searchParams);
   await applyDemo(demo); // ?demo=loading waits 3 s, ?demo=error throws → loading.js / error.js

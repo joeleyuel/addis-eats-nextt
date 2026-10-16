@@ -11,6 +11,7 @@ import useSWR from "swr";
 import { useCart } from "./Providers";
 import { fetcher } from "@/lib/fetcher";
 import { signOut } from "@/app/actions";
+import { isAdminRole, isStaffRole } from "@/lib/roles";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -26,6 +27,8 @@ const STAFF_LINKS = [
   { href: "/kitchen", label: "Kitchen" },
   { href: "/dashboard", label: "Dashboard" },
 ];
+// Admin only (a separate sign-in at /admin/signin). Same rule: a convenience, not security.
+const ADMIN_LINKS = [{ href: "/admin", label: "Admin" }];
 
 export default function SiteHeader() {
   const { itemCount } = useCart();
@@ -78,7 +81,11 @@ export default function SiteHeader() {
   }, [menuOpen]);
 
   const isActive = (href) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
-  const links = user?.role === "staff" ? [...NAV_LINKS, ...STAFF_LINKS] : NAV_LINKS;
+  const links = [
+    ...NAV_LINKS,
+    ...(isStaffRole(user?.role) ? STAFF_LINKS : []),
+    ...(isAdminRole(user?.role) ? ADMIN_LINKS : []),
+  ];
   const close = () => setMenuOpen(false);
 
   return (

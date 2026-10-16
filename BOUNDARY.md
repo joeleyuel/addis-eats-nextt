@@ -46,3 +46,11 @@ Server-first: everything is a server component until something forces `"use clie
 
 - No function props cross the boundary from server to client (`CategoryBar.onSelect` is client-to-client).
 - Nothing sensitive is client-reachable: `SESSION_SECRET` and `STAFF_PHONES` are read only in `lib/session.js` (`server-only`, no `NEXT_PUBLIC_` prefix); the session cookie is `httpOnly`, `secure` (production) and `sameSite=lax`; prices are re-read from the server's menu, never trusted from the client.
+
+## Admin console
+
+**Client (8 new files, all under `app/admin/_components/`):** `AdminNav` (active link via `usePathname`), `ConfirmDialog` (native `<dialog>` + `showModal`), `OrderStatusForm`, `DeleteDishButton`, `DishForm` (controlled fields, `fetch` to the admin API), `AutoRefresh` (`router.refresh` on a timer, opt-in). The two charts are the existing `RevenueChart` / `OrdersChart` client leaves. None of them receives a function from a server component, and none reads a secret: they receive plain strings/numbers (`DishForm` gets the dish as strings; `OrderStatusForm` gets an id and a status).
+
+**Server:** every page under `app/admin/` (`requireAdmin()` first), `Pagination`, `StatusPill`, `PageHeader`, `app/admin/actions.js` (`"use server"`: `adminSignIn`), the `/api/admin/*` handlers, `lib/admin-auth.js`, `lib/admin-api.js`, `lib/images.js` (`server-only`).
+
+**Shared (no server-only imports):** `lib/roles.js`, `lib/order-status.js`, `lib/dish-validate.js` (the one dish schema: form and API), `lib/admin-filters.js`, `lib/privacy.js`, `lib/rate-limit.js`, and `lib/safe-next.js` (now also `safeAdminNext`, `adminSignInUrl`).

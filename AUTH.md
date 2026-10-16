@@ -54,3 +54,15 @@ Server actions: `placeOrder` (`actions.js:56`) and `cancelOrder` (`actions.js:85
 - A stream already open keeps running for up to 25 s after sign-out (it closes itself at that point); the browser's reconnect is then refused with 401.
 - The CSV export is formula-safe (`'` prefix) but not signed or time-limited — it is simply behind the session.
 - The map's courier is simulated (`lib/tracking.js`); the OpenStreetMap public tile server is not for production traffic.
+
+## Admin console (added with `/admin`)
+
+A third role, `admin`, sits above `staff`. **It cannot be obtained through `/signin`**: that form still decides roles from `STAFF_PHONES` only and returns `customer` or `staff`. `/admin/signin` additionally needs a phone in `ADMIN_PHONES` and the secret `ADMIN_ACCESS_CODE`; the session is 4 h. Admins can open everything staff can. Per-route detail, the API table, limits and tests are in `ADMIN.md`.
+
+| Route | Layer 1 | Layer 2 | Layer 3 (the data) |
+| --- | --- | --- | --- |
+| `/admin/*` (not `/admin/signin`) | middleware → `/admin/signin` | every page: `requireAdmin()` (signed out → sign-in; not admin → not-found) | `queryAdmin*`, `adminOverview`, `adminOrderDetail` return `null` unless admin |
+| `PATCH /api/admin/orders/[id]`, `GET` | — | `authorizeAdmin()` → 401 / 403, same-origin check on writes | `setOrderStatusFor` / `adminOrderDetail` check the role again |
+| `POST /api/admin/dishes`, `PUT` / `DELETE /api/admin/dishes/[id]` | — | `authorizeAdmin()` as above, JSON-only, 32 KB cap | `createDish` / `updateDish` / `deleteDish` check the role and validate (`lib/dish-validate.js`) |
+
+`listAllOrders` (kitchen, dashboard) now accepts `staff` **or** `admin`. `/kitchen` and `/dashboard` use `isStaffRole`.

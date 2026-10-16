@@ -12,6 +12,7 @@ const STUBS = {
   "server-only": stub("empty.mjs"),
   "next/headers": stub("next-headers.mjs"),
   "next/navigation": stub("next-navigation.mjs"),
+  "next/cache": stub("next-cache.mjs"),
   react: stub("react.mjs"),
 };
 

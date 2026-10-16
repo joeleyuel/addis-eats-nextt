@@ -50,7 +50,7 @@ export default async function DishPage({ params }) {
     "@type": "MenuItem",
     name: dish.name,
     description: dish.description,
-    image: absoluteUrl(dish.image),
+    ...(dish.image ? { image: absoluteUrl(dish.image) } : {}),
     offers: { "@type": "Offer", price: dish.price, priceCurrency: "ETB" },
   };
 
@@ -84,7 +84,7 @@ export default async function DishPage({ params }) {
             <h1>{dish.name}</h1>
           </div>
           <p className="dish-detail__rating">
-            ★ {dish.rating.toFixed(1)} ({dish.reviews} reviews)
+            {dish.reviews > 0 ? `★ ${dish.rating.toFixed(1)} (${dish.reviews} reviews)` : "New on the menu"}
           </p>
           <p className="dish-detail__price">{formatETB(dish.price)}</p>
           <p className="dish-detail__desc">{dish.description}</p>

@@ -27,7 +27,8 @@ export default function DishCard({ dish }) {
         </Link>
         <p className="dish-card__desc">{dish.shortDescription}</p>
         <div className="dish-card__meta">
-          <span className="dish-card__rating">★ {dish.rating.toFixed(1)}</span>
+          {/* A dish an admin has just added has no reviews yet: say "New", not "★ 0.0". */}
+          <span className="dish-card__rating">{dish.reviews > 0 ? `★ ${dish.rating.toFixed(1)}` : "New"}</span>
           <span aria-hidden="true">·</span>
           <span>{dish.prepTime}</span>
         </div>

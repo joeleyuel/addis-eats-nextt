@@ -16,6 +16,13 @@ const problems = [];
 const secret = process.env.SESSION_SECRET;
 if (!secret || secret.length < 16) problems.push("SESSION_SECRET is missing or shorter than 16 characters (copy .env.example to .env.local).");
 if (secret === "replace-me-with-a-long-random-string") problems.push("SESSION_SECRET is still the example value.");
+// Admin console (optional): needs BOTH variables, and the code must be long and not an example.
+const adminPhones = (process.env.ADMIN_PHONES || "").trim();
+const adminCode = process.env.ADMIN_ACCESS_CODE || "";
+if (adminPhones && adminCode.length < 12) problems.push("ADMIN_PHONES is set but ADMIN_ACCESS_CODE is missing or shorter than 12 characters, so nobody can sign in to /admin.");
+if (adminCode && !adminPhones) problems.push("ADMIN_ACCESS_CODE is set but ADMIN_PHONES is empty, so nobody can sign in to /admin.");
+if (/replace-me|change-me|example/i.test(adminCode)) problems.push("ADMIN_ACCESS_CODE still looks like an example value.");
+if (!adminPhones && !adminCode) console.log("Note: ADMIN_PHONES / ADMIN_ACCESS_CODE are not set, so /admin sign-in is switched off.");
 for (const name of Object.keys(process.env)) {
   if (/^NEXT_PUBLIC_.*(SECRET|PASSWORD|TOKEN|PRIVATE|DATABASE)/i.test(name)) {
     problems.push(`${name} looks like a secret but is NEXT_PUBLIC_, so it would be published in the browser bundle.`);
